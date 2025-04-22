@@ -72,4 +72,4 @@ Feel free to fork the repo, create a new branch, and submit a pull request.
 📬 Contact
 Created by Nishant Raj
 📧 Email: nishantrajgupta31811@gmail.com
-🔗 [Linkedin] (https://www.linkedin.com/in/nishant-raj-8a27b52b2/)
+🔗 https://www.linkedin.com/in/nishant-raj-8a27b52b2/
