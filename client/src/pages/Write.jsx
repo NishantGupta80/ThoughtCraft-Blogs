@@ -104,7 +104,7 @@ const write = () => {
           </label>
           <div className="buttons">
             <button> Save as a Draft</button>
-            <button onClick={handleUploadImage}> Publish </button>
+            <button onClick={handleUploadImage}>{state ? 'Update' : Publish}</button>
           </div>
         </div>
         <div className="item">

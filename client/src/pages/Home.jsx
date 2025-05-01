@@ -1,8 +1,6 @@
 import {React,useState,useEffect} from 'react'
 import {Link,useLocation} from 'react-router-dom';
 import axios from 'axios';
-//import m from "./../../../server/uploads/"
-
 
 //  const posts = [
 //     {
@@ -49,6 +47,12 @@ const Home = () => {
     fetchData(); 
   },[cat]);  // useEffect will fire it self (function from line 39 to 49) whenever cat variable is changed;
 
+
+  const getText = (html) =>{
+    const doc = new DOMParser().parseFromString(html, "text/html")
+    return doc.body.textContent
+  }
+
   
 
   return (
@@ -57,14 +61,14 @@ const Home = () => {
         {posts.map((post) => (
           <div className="post" key={post.post_id}>
             <div className="img">
-                <img src={`./../../../server/uploads/${post.image}`} alt="" />  { /* need to change here Nishant */}
+                <img src={`/uploads/${post.image}`} alt="" />  { /* need to change here Nishant */}
             </div>
             <div className="content">
               <Link className="link" to={`/post/${post.post_id}`}>
                 <h1>{post.title}</h1>
               </Link>
               {/* <p>{getText(post.desc)}</p> */}
-              <p>{post.description}</p>
+              <p>{getText(post.description)}</p>
               <button>Read More</button>
             </div>
           </div>
